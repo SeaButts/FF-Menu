@@ -1,0 +1,266 @@
+/*
+@font-face{
+    font-family:VT323;
+    src:url(fonts/VT323-Regular.ttf);
+}
+*/
+
+body{
+    font-family: 'VT323', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-shadow:
+        .2px 0px 0 #000,
+        1px 1px 0 #000,              
+        -1px -.5px 0 #000,
+        2px 1px 0 #000;
+}
+
+#center{
+    width:1200px;
+    margin: auto;
+}
+
+.content_wrapper{
+    background-color: black;
+    cursor: crosshair;
+    opacity: 0;
+    width:100%;
+    max-width:1200px;
+    height:810px;
+    position:absolute;
+    margin:0 auto;
+    overflow: hidden;
+}
+
+.content_wrapper:hover{
+    cursor: crosshair;
+}
+
+.animation_box{
+    position:absolute;
+    height:100%;
+    width:100%;
+    bottom: -105%;
+/*    overflow: hidden;*/
+}
+
+/*Affects all windows in the frame*/
+.window{
+    background-color: var(--window-bg);
+    border: 3px solid white;
+    border-radius: 12px;
+    margin: 2px;
+    position:absolute;
+    box-shadow: 
+    0 1px 2px #fff, /*bottom external highlight*/
+    0 -1px 1px #666, /*top external shadow*/ 
+    inset 0 -1px 1px rgba(0,0,0,0.5), /*bottom internal shadow*/ 
+    inset 0 1px 1px rgba(255,255,255,0.8); /*top internal highlight*/
+}
+
+/*Character Window Style*/
+
+.primary_window{
+    height:90%;
+    width:75.8%;
+    top:3.95%;
+    left:4.5%;
+    border-radius: 0px;
+}
+
+.char_div{
+    height:24.76%;
+    width:100%;
+    margin: 2px 0px;
+    box-shadow: 
+    0 -2px 2px #FFF, /*bottom external highlight*/
+    0 1px 0px #7AD, /*top external shadow*/ 
+    inset 0 -1px 3px rgba(0,0,0,0.5), /*bottom internal shadow*/ 
+    inset 0 -1px 0px rgba(255,255,255,0.8);
+    position:relative;
+}
+
+.picture_container{
+    height:100%;
+    width:35%;
+    max-height:180px;
+    width:159px;
+    background-color:rgba(40,35,55,.3);
+    position:absolute;
+    left:4.5%;
+    margin-right:10px;
+    
+}
+
+.menu_profile{
+    position:absolute;
+    height:98.5%;
+    width:78%;
+    bottom:2px;
+    background-color:white;
+}
+
+.profile_right{
+    right:0px;
+}
+
+.char_info{
+    display:block;
+    position:absolute;
+    left:220px;
+}
+
+.char_info > .charStat{
+    margin-top:18px;
+}
+
+.char_info > .charStat ~ .charStat{
+    margin-top:7px;
+}
+
+.char_name{
+    display:block;
+    margin-top:9%;
+    font-size: 1.8em;
+}
+
+.char_header{
+    font-size: 2.0em;
+    font-weight: 700;
+    text-shadow:
+        2px 3px 0 #000,       
+        2px 2px 0 #000,     
+        -1px 1px 0 #000,      
+        1px 1px 0 #000;
+}
+
+.char_data{
+    position: absolute;
+    font-weight: 300;
+    font-size: 1.8em;
+    right:-10%;
+}
+
+/*Navigation Window Style*/
+.sub_window_nav{
+    height:45.5%;
+    width:19%;
+    min-width: 150px;
+    top:0.78%;
+    right:2.5%;
+    z-index:10
+}
+
+.main_nav{
+    text-align: left;
+    position: relative;
+    left: 9%;
+    top:3%;
+    font-size: 2.2em;
+}
+
+.main_navItem{
+    display:block;
+    color:white;
+    text-decoration: none;
+}
+
+.cursor{
+    display: inline-block;
+    position: absolute;
+    height:24px;
+    left:-40px;
+    padding-top: 3%;
+    display: none;
+}
+
+/*Contact Window Style*/
+.sub_window2{
+    height:10.68%;
+    width:22.5%;
+    min-width: 182px;
+    bottom:11.10%;
+    right:5%;
+    z-index:10;
+}
+
+.sub_window2 h3{
+    position: absolute;
+    top:-45%;
+    left: 5%;
+}
+
+#contact_content{
+    position: absolute;
+    top:0%;
+    left:4%;
+    width:95%;
+}
+
+#contact_content i{
+    margin-right: 12px;
+}
+
+.contactItem{
+    margin-top:10px;
+}
+
+/*Location Window Style*/
+.sub_window3{
+    height:6.5%;
+    width:22.5%;
+    min-width: 182px;
+    bottom:2.55%;
+    right:5%;
+    z-index:10;
+}
+
+.sub_window3 h3{
+    position: absolute;
+    top: -72%;
+    left: 3%;
+}
+
+#locationContent{
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    width: 95%;
+}
+
+#locationContent i{
+    margin-right: 12px;
+}
+
+#location{
+    font-size: 1.3em;
+}
+
+#sub_loc{
+    position: absolute;
+    left:25%;
+    font-size: .85em;
+    font-style: italic;
+}
+
+@media screen and (max-width:865px){    
+    .main_nav{
+        font-size:1.9em;
+    }
+}
+
+@media screen and (max-width:650px){
+    .char_info{
+        left:190px;
+    }
+    
+    .char_name, .char_data{
+        font-size: 1.5em;
+    }
+    
+    .char_header{
+        font-size: 1.6em;
+    }
+}
